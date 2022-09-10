@@ -134,12 +134,12 @@
 			;; Now address of WinExec is in rdi
 			;; Write string of calc.exe into the stack and get the stack pointer before calling 
 
-			mov rbx, 6578652e41414141h  ; exe.AAAA
-			shr rbx, 32                 ;  ".exe\x00\x00\x00\x00"
+			mov rbx, 6578652e41414141h 
+			shr rbx, 32                 ; \x00\x00\x00\x00.exe
 			push rbx    
-			mov rbx, 636c61635c32336dh  ; 
+			mov rbx, 636c61635c32336dh  ; clac\23m
 			push rbx
-			mov rbx, 65747379735c7377h  ; \sw
+			mov rbx, 65747379735c7377h  ; etsys\sw
 			push rbx
 			mov rbx, 6f646e69575c3a43h  ; odniW\:C
 			push rbx                        
